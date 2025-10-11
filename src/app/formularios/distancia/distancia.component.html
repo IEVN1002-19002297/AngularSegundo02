@@ -1,0 +1,31 @@
+<div>
+  <h1>Calcular Distancia Entre puntos</h1>
+  <form [formGroup]="formulario">
+    <div class="mb-3">
+      <label for="numero1" class="form-label">
+        X 1
+      </label>
+      <input type="number" name="numero1" id="numero1" class="form-control" formControlName="numero1">
+      <label for="numero1" class="form-label">
+        Y 2
+      </label>
+      <input type="number" name="numero2" id="numero2" class="form-control" formControlName="numero2">
+      <br>
+      <label for="numero1" class="form-label">
+        X 2
+      </label>
+      <input type="number" name="numero3" id="numero3" class="form-control" formControlName="numero3">
+      <br>
+      <label for="numero1" class="form-label">
+        Y 2
+      </label>
+      <input type="number" name="numero4" id="numero4" class="form-control" formControlName="numero4">
+      <br>
+      <button class="btn btn-primary" (click)="calcularDistancia()">Multiplicar</button>
+      <h2>
+      <br>
+      Resultado:{{resultado}}</h2>
+      <br>
+    </div>
+  </form>
+</div>
