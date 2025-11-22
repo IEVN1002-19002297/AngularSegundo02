@@ -1,31 +1,87 @@
-<div>
-  <h1>Calcular Distancia Entre puntos</h1>
-  <form [formGroup]="formulario">
-    <div class="mb-3">
-      <label for="numero1" class="form-label">
-        X 1
+<div class="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mt-8">
+  <h1 class="text-2xl font-bold text-center text-gray-800 dark:text-white mb-6">
+    Calcular Distancia Entre Puntos
+  </h1>
+
+  <form [formGroup]="formulario" class="space-y-4">
+    <!-- X1 -->
+    <div>
+      <label for="numero1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        X₁
       </label>
-      <input type="number" name="numero1" id="numero1" class="form-control" formControlName="numero1">
-      <label for="numero1" class="form-label">
-        Y 2
+      <input
+        type="number"
+        id="numero1"
+        name="numero1"
+        formControlName="numero1"
+        placeholder="Coordenada X1"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      />
+    </div>
+
+    <!-- Y1 -->
+    <div>
+      <label for="numero2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Y₁
       </label>
-      <input type="number" name="numero2" id="numero2" class="form-control" formControlName="numero2">
-      <br>
-      <label for="numero1" class="form-label">
-        X 2
+      <input
+        type="number"
+        id="numero2"
+        name="numero2"
+        formControlName="numero2"
+        placeholder="Coordenada Y1"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      />
+    </div>
+
+    <!-- X2 -->
+    <div>
+      <label for="numero3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        X₂
       </label>
-      <input type="number" name="numero3" id="numero3" class="form-control" formControlName="numero3">
-      <br>
-      <label for="numero1" class="form-label">
-        Y 2
+      <input
+        type="number"
+        id="numero3"
+        name="numero3"
+        formControlName="numero3"
+        placeholder="Coordenada X2"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      />
+    </div>
+
+    <!-- Y2 -->
+    <div>
+      <label for="numero4" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Y₂
       </label>
-      <input type="number" name="numero4" id="numero4" class="form-control" formControlName="numero4">
-      <br>
-      <button class="btn btn-primary" (click)="calcularDistancia()">Multiplicar</button>
-      <h2>
-      <br>
-      Resultado:{{resultado}}</h2>
-      <br>
+      <input
+        type="number"
+        id="numero4"
+        name="numero4"
+        formControlName="numero4"
+        placeholder="Coordenada Y2"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      />
+    </div>
+
+    <!-- Botón -->
+    <button
+      type="button"
+      (click)="calcularDistancia()"
+      class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800"
+    >
+      Calcular Distancia
+    </button>
+
+    <!-- Resultado -->
+    <div
+      class="mt-6 bg-gray-50 dark:bg-gray-700 p-4 rounded-lg text-gray-900 dark:text-white"
+      *ngIf="resultado !== undefined"
+    >
+      <h2 class="text-lg font-semibold mb-2">Resultado</h2>
+      <p class="font-bold text-green-700 dark:text-green-400">
+        Distancia: {{ resultado }}
+      </p>
     </div>
   </form>
 </div>

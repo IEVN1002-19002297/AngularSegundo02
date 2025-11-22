@@ -5,12 +5,11 @@ import {Zodiaco} from './zodiaco';
 
 @Component({
   selector: 'app-zodiaco',
-  standalone: true,
   templateUrl: './zodiaco.component.html',
   styleUrls: ['./zodiaco.component.css'],
   imports: [ReactiveFormsModule, CommonModule],
 })
-export default class ZodiacoComponent {
+export class ZodiacoComponent {
   formularioSigno: FormGroup;
   mostrarInfo = false;
   edad: number = 0;

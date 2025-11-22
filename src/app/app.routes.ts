@@ -2,15 +2,19 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'utl',
+    loadChildren:()=>import('./utl/utl.routes').then((m) => m.default),
+  },
+  {
     path:'auth',
-    loadChildren:()=>import('./auth/features/auth.routes')
+    loadChildren:()=>import('./auth/features/auth.routes').then((m) => m.default),
   },
   {
     path:'formularios',
-    loadChildren:()=>import('./formularios/formularios.routes')
+    loadChildren:()=>import('./formularios/formularios.routes').then((m) => m.default),
   },
   {
     path:'utl',
-    loadChildren:()=>import('./utl/utl.routes')
+    loadChildren:()=>import('./utl/utl.routes').then((m) => m.default),
   },
 ];

@@ -1,17 +1,18 @@
 import { Routes } from "@angular/router";
 
-export const routes: Routes = [
+
+export default [
   {
     path:'multiplicacion',
-    loadComponent:()=>import('./multiplicacion/multiplicacion.component')
+    loadComponent:()=>import('./multiplicacion/multiplicacion.component').then(c=>c.MultiplicacionComponent)
   },
   {
     path:'distancia',
-    loadComponent:()=>import('./distancia/distancia.component')
+    loadComponent:()=>import('./distancia/distancia.component').then(c=>c.DistanciaComponent)
   },
   {
     path:'zodiaco',
-    loadComponent:()=>import('./zodiaco/zodiaco.component')
-  }
+    loadComponent:()=>import('./zodiaco/zodiaco.component').then(c=>c.ZodiacoComponent)
+  },
 
 ]as Routes;
